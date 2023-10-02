@@ -1,0 +1,31 @@
+Pseudocode for the main methods
+
+Method: private double findAndCalculateSalary(String persID)
+
+// Go to each Department. Loop HashMap departments
+// Check for persID. Loop teachers ArrayList 	
+// IF persID found, 
+	calculate salary RUN method computePayroll() 
+	RETURN Salary
+// IF NOT FOUND 
+	Check for persID. Loop staff ArrayList 	
+// IF persID found, 
+	calculate salary RUN computePayroll() method
+// Return Salary
+
+
+
+Method: public double computePayroll()
+
+// In Teacher Class
+// Transform Degree to Rate -> RUN degreeToRate() method
+// IF hoursWorked is 32 -> use Teacher FullTime salary formula
+	(32 * rate * 2) * 0.85
+// ELSE -> use Teacher hoursWorked based salary formula
+	(hoursWorked * rate * 2) * 0.76
+// Return Salary
+
+// In Staff Class
+// Use Teacher FullTime salary formula
+	(workload * 32 * 2) * 0.75;
+// Return Salary
